@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../onbording/onborboardin_screen.dart';
+import '../../../onbording/presentations/screens/onborboardin_screen.dart';
 import '../../controllers/language_controller.dart';
 
 class LanguagePage extends StatelessWidget {
@@ -66,7 +66,7 @@ class LanguagePage extends StatelessWidget {
                       snackPosition: SnackPosition.TOP);
                   return;
                 }
-                Get.to(() => const OnborboardinScreen());
+                Get.to(() =>  OnborboardinScreen());
               },
               child: Container(
                 padding:
