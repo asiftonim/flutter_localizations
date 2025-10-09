@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 import '../../../core/app_translator.dart';
-import '../../core/app_translator.dart';
 
 class OnboardingController extends GetxController {
   // Reactive variable to track current language

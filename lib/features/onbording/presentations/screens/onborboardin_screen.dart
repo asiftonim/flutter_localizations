@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../core/app_translator.dart';
-import '../../../home/controllers/language_controller.dart';
+import '../../../authentication/login/login_page.dart';
 import '../../controllers/onboarding_controller.dart';
 
 class OnborboardinScreen extends StatelessWidget {
   OnborboardinScreen({super.key});
-
 
   final OnboardingController controller = Get.put(OnboardingController());
 
@@ -17,7 +16,7 @@ class OnborboardinScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
               const SizedBox(height: 134),
@@ -51,8 +50,37 @@ class OnborboardinScreen extends StatelessWidget {
                     color: Colors.black,
                   ),
                 );
-              })
-
+              }),Spacer(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Skip",
+                    style: TextStyle(
+                      fontSize: 16
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: (){
+                      Get.to(() =>LoginPage());
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: Color(0xFFFC961A),
+                      ),
+                      child: Center(
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Icon(Icons.arrow_forward_outlined,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 40,),
             ],
           ),
         ),
